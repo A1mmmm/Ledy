@@ -123,7 +123,8 @@ if (nextBtn)
 serviceCards.forEach((card) => {
   card.addEventListener("click", () => {
     const title = card.querySelector("h3")?.innerText || "";
-    const desc = card.querySelector("p")?.innerText || "";
+    const descParagraph = card.querySelector("p");
+    const descList = card.querySelector("ul");
     const serviceId = card.dataset.serviceId;
 
     const serviceImagesById = {
@@ -164,7 +165,28 @@ serviceCards.forEach((card) => {
     const currentServiceImages = serviceImagesById[serviceId] || fallbackImages;
 
     document.getElementById("serviceTitle").innerText = title;
-    document.getElementById("serviceDescription").innerText = desc;
+
+    const descContainer = document.getElementById("serviceDescription");
+    if (descContainer) {
+      descContainer.innerHTML = "";
+
+      if (descList) {
+        const ul = document.createElement("ul");
+        ul.className = "service-modal-list";
+
+        Array.from(descList.querySelectorAll("li")).forEach((li) => {
+          const item = document.createElement("li");
+          item.textContent = li.innerText;
+          ul.appendChild(item);
+        });
+
+        descContainer.appendChild(ul);
+      } else if (descParagraph) {
+        const p = document.createElement("p");
+        p.textContent = descParagraph.innerText;
+        descContainer.appendChild(p);
+      }
+    }
 
     if (serviceImagesContainer) {
       serviceImagesContainer.innerHTML = "";

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>SPA в Ростове-на-Дону — салон красоты LEDY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://ledysalon.ru/"},
+        {"@type": "ListItem", "position": 2, "name": "SPA в Ростове-на-Дону", "item": "https://ledysalon.ru/spa-rostov"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": []
+    }
+    </script>
+</head>
+<body>
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal_header">
+                <h2 id="serviceTitle"></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="service-images">
+                <div class="service-images-container"></div>
+                <div class="service-images-nav">
+                    <button class="image-nav-btn prev">←</button>
+                    <button class="image-nav-btn next">→</button>
+                </div>
+            </div>
+            <p id="serviceDescription" style="margin-top: 20px;"></p>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div id="logo" class="logo"><h1>LEDY</h1></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/index.html">Главная</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/strizhka-rostov.html">Стрижки</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/okrashivanie-rostov.html">Окрашивание</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/manikyur-rostov.html">Маникюр</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/brow-rostov.html">Брови и ресницы</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/spa-rostov.html">SPA</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/kommunisticheskiy.html">Коммунистический</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/krasnodarskaya.html">2-я Краснодарская</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switcher">
+                <button class="theme-btn active" id="lightTheme">Светлая</button>
+                <button class="theme-btn" id="darkTheme">Темная</button>
+            </div>
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero inner-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">SPA-программы в Ростове-на-Дону</h1>
+                    <h2 class="hero-subtitle">Расслабляющие и восстановительные SPA-ритуалы в салоне LEDY</h2>
+                    <p class="hero-text">В салоне красоты LEDY в Ростове-на-Дону вы можете выбрать SPA-программы для отдыха, восстановления кожи и снятия напряжения. Мы создаём атмосферу, в которой легко отключиться от повседневных забот, расслабиться и уделить время себе.</p>
+                    <button class="btn-primary" id="bookBtn">Записаться</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about-spa">
+            <div class="container">
+                <h2 class="section-title">SPA-программы в салоне LEDY</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>SPA-процедуры проходят в комфортных кабинетах с мягким светом и спокойной музыкой. Мы используем профессиональные уходовые линии для тела, которые помогают увлажнить кожу, улучшить её тонус и придать ощущение лёгкости. Каждая программа может включать скрабирование, обёртывания, массажные техники и завершающие уходы.</p>
+                        <p>Перед началом ритуала мастер уточняет ваши пожелания: хотите ли вы расслабиться, взбодриться или уделить основное внимание определённой зоне. На основе этого подбирается оптимальная программа и средства. Мы уделяем внимание комфорту на протяжении всей процедуры и учитываем ваши индивидуальные особенности.</p>
+                        <p>Вы можете приходить на SPA как самостоятельно, так и совмещать его с уходами за волосами, маникюром или педикюром. Салоны располагаются на Коммунистическом проспекте, 32 и 2-й Краснодарской улице, 96/6 — выбирайте адрес, который ближе к вам.</p>
+                    </div>
+                    <div class="advantages">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">⭐</div>
+                            <h3 class="advantage-title">Профессионализм</h3>
+                            <p>Мастера с опытом от 5 лет и регулярным повышением квалификации</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">🔒</div>
+                            <h3 class="advantage-title">Качество</h3>
+                            <p>Используем только сертифицированные материалы премиум-класса</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">💫</div>
+                            <h3 class="advantage-title">Индивидуальность</h3>
+                            <p>Персональный подход к каждому клиенту и создание образа, который удобно носить каждый день</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">🏆</div>
+                            <h3 class="advantage-title">Надёжность</h3>
+                            <p>Гарантия на услуги и бесплатная коррекция при необходимости</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="price-spa">
+            <div class="container">
+                <h2 class="section-title">SPA — программы и цены</h2>
+                <div class="services-grid single-column">
+                    <div class="service-card">
+                        <h3>Основные программы</h3>
+                        <ul>
+                            <li>Детокс-программа — от 2 700 ₽</li>
+                            <li>Антистресс-уход — от 3 200 ₽</li>
+                            <li>Ароматерапия — от 2 900 ₽</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Дополнительные ритуалы</h3>
+                        <ul>
+                            <li>Скрабирование тела — от 1 200 ₽</li>
+                            <li>Обёртывание — от 1 800 ₽</li>
+                            <li>Лёгкий расслабляющий массаж зоны спины и шеи — от 1 500 ₽</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="section-note">Подробное наполнение и продолжительность программ можно уточнить у администратора. Мы поможем подобрать SPA-ритуал под ваши задачи и свободное время.</p>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio-spa">
+            <div class="container">
+                <h2 class="section-title">Атмосфера SPA</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Комната для SPA-ритуалов</p></div>
+                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Элементы декора и свечи</p></div>
+                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Уходовые средства</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq-spa">
+            <div class="container">
+                <h2 class="section-title">Частые вопросы</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Нужно ли готовиться к SPA-процедурам заранее?</summary>
+                        <p>Достаточно прийти вовремя и взять с собой хорошее настроение. Если есть индивидуальные особенности здоровья, сообщите об этом администратору при записи.</p>
+                    </details>
+                    <details>
+                        <summary>Можно ли совмещать SPA с другими процедурами?</summary>
+                        <p>Да, часто клиенты совмещают SPA с маникюром, педикюром или уходами для волос. Мы поможем выстроить удобный маршрут по времени.</p>
+                    </details>
+                    <details>
+                        <summary>Как долго длится одна программа?</summary>
+                        <p>В среднем длительность программ составляет от 60 до 120 минут. Точное время зависит от выбранного ритуала и обсуждается при записи.</p>
+                    </details>
+                    <details>
+                        <summary>Есть ли противопоказания к SPA-процедурам?</summary>
+                        <p>Некоторые состояния здоровья требуют осторожности или отказа от отдельных процедур. Мы всегда рекомендуем при наличии хронических заболеваний предварительно консультироваться с врачом.</p>
+                    </details>
+                    <details>
+                        <summary>Можно ли подарить SPA-программу?</summary>
+                        <p>Да, вы можете оформить подарочный сертификат на любую программу или сумму.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Контакты салона LEDY</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Адреса салонов:</h3>
+                            <p>• Коммунистический проспект, 32</p>
+                            <p>• 2 Краснодарская 96/6</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Телефон:</h3>
+                            <p><a href="tel:+79034892201">+7 (903) 489-22-01</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Часы работы:</h3>
+                            <p>Ежедневно с 9:00 до 21:00</p>
+                        </div>
+                        <div class="contact-social">
+                            <a href="https://wa.me/+79034892201" target="_blank" class="social-link whatsapp">WhatsApp</a>
+                            <a href="https://t.me/+79034892201" target="_blank" class="social-link telegram">Telegram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 LEDY. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal_header">
+                <h2>Записаться на услугу</h2>
+                <span class="close"><div>&times;</div></span>
+            </div>
+            <form id="bookingForm"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdax-mkr_iyJrNF4JHxCZUQgB0ypgSdYBKAPqBWTjLHfTt41g/formResponse"
+                method="POST">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="entry.1205287458" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="entry.1211161903" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Услуга:</label>
+                    <select id="service" name="entry.638195446" required>
+                        <option value="">Выберите услугу</option>
+                        <option value="Маникюр">Маникюр</option>
+                        <option value="Педикюр">Педикюр</option>
+                        <option value="Окрашивание">Окрашивание</option>
+                        <option value="Косметология">Косметология</option>
+                        <option value="Стрижка">Стрижка</option>
+                        <option value="SPA-программы">SPA-программы</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

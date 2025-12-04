@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Салон красоты на Коммунистическом проспекте — LEDY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://ledysalon.ru/"},
+        {"@type": "ListItem", "position": 2, "name": "Салон красоты на Коммунистическом проспекте", "item": "https://ledysalon.ru/kommunisticheskiy"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": []
+    }
+    </script>
+</head>
+<body>
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal_header">
+                <h2 id="serviceTitle"></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="service-images">
+                <div class="service-images-container"></div>
+                <div class="service-images-nav">
+                    <button class="image-nav-btn prev">←</button>
+                    <button class="image-nav-btn next">→</button>
+                </div>
+            </div>
+            <p id="serviceDescription" style="margin-top: 20px;"></p>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div id="logo" class="logo"><h1>LEDY</h1></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/index.html">Главная</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/strizhka-rostov.html">Стрижки</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/okrashivanie-rostov.html">Окрашивание</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/manikyur-rostov.html">Маникюр</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/brow-rostov.html">Брови и ресницы</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/spa-rostov.html">SPA</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/kommunisticheskiy.html">Коммунистический</a></li>
+                    <li><a href="file:///D:/beauty-version-control/beauty-salon/krasnodarskaya.html">2-я Краснодарская</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switcher">
+                <button class="theme-btn active" id="lightTheme">Светлая</button>
+                <button class="theme-btn" id="darkTheme">Темная</button>
+            </div>
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero inner-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Салон красоты LEDY на Коммунистическом проспекте, 32</h1>
+                    <h2 class="hero-subtitle">Удобное расположение и полный спектр услуг</h2>
+                    <p class="hero-text">Салон красоты LEDY на Коммунистическом проспекте, 32 — это удобная локация для жителей ближайших улиц и районов. Здесь вы можете записаться на стрижку, окрашивание, маникюр, уход за бровями и ресницами, а также SPA-программы. Мы создали атмосферу, в которой приятно провести несколько часов и выйти с ощущением обновления.</p>
+                    <button class="btn-primary" id="bookBtn">Записаться</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about-komprospekt">
+            <div class="container">
+                <h2 class="section-title">О салоне на Коммунистическом проспекте</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Салон расположен рядом с жилыми кварталами и удобными транспортными развязками. К нам легко добраться как на личном автомобиле, так и на общественном транспорте. Внутри вас ждут комфортные рабочие места, аккуратные залы и внимательные администраторы.</p>
+                        <p>В салоне работают мастера по волосам, ногтям, бровям и ресницам, а также специалисты, проводящие SPA-ритуалы. Мы придерживаемся единых стандартов сервиса сети LEDY, поэтому вы можете быть уверены в качестве услуг и соблюдении гигиенических норм.</p>
+                        <p>Записаться можно заранее на удобное время, а также уточнить наличие свободных окон в день обращения. При необходимости администратор подскажет, как быстрее добраться до салона и где удобнее припарковаться.</p>
+                    </div>
+                    <div class="advantages">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">⭐</div>
+                            <h3 class="advantage-title">Профессионализм</h3>
+                            <p>Мастера с опытом от 5 лет и регулярным повышением квалификации</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">🔒</div>
+                            <h3 class="advantage-title">Качество</h3>
+                            <p>Используем только сертифицированные материалы премиум-класса</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">💫</div>
+                            <h3 class="advantage-title">Индивидуальность</h3>
+                            <p>Персональный подход к каждому клиенту и создание образа, который удобно носить каждый день</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="advantage-icon">🏆</div>
+                            <h3 class="advantage-title">Надёжность</h3>
+                            <p>Гарантия на услуги и бесплатная коррекция при необходимости</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services-komprospekt">
+            <div class="container">
+                <h2 class="section-title">Услуги в салоне на Коммунистическом проспекте</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Волосы</h3>
+                        <ul>
+                            <li>Стрижки и укладки</li>
+                            <li>Окрашивание любой сложности</li>
+                            <li>Уход и восстановление волос</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Ногти</h3>
+                        <ul>
+                            <li>Маникюр и педикюр</li>
+                            <li>Гель-лак, укрепление</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Брови и ресницы</h3>
+                        <ul>
+                            <li>Коррекция и окрашивание бровей</li>
+                            <li>Окрашивание ресниц</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>SPA и уход</h3>
+                        <ul>
+                            <li>SPA-программы</li>
+                            <li>Уходы для кожи рук</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq-komprospekt">
+            <div class="container">
+                <h2 class="section-title">Частые вопросы</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Где находится вход в салон?</summary>
+                        <p>Салон расположен по адресу Коммунистический проспект, 32. При записи администратор подскажет ориентиры и ближайшую парковку.</p>
+                    </details>
+                    <details>
+                        <summary>Нужно ли заранее записываться?</summary>
+                        <p>Рекомендуем предварительную запись, чтобы выбрать удобное время. При наличии свободных окошек мы можем принять и в день обращения.</p>
+                    </details>
+                    <details>
+                        <summary>Можно ли прийти с ребёнком?</summary>
+                        <p>Да, мы делаем детские стрижки и маникюр, а также помогаем сделать визит комфортным для маленьких гостей.</p>
+                    </details>
+                    <details>
+                        <summary>Работаете ли вы по выходным?</summary>
+                        <p>Салон открыт ежедневно с 9:00 до 21:00.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Контакты салона на Коммунистическом проспекте</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Адрес:</h3>
+                            <p>Коммунистический проспект, 32, Ростов-на-Дону</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Телефон:</h3>
+                            <p><a href="tel:+79034892201">+7 (903) 489-22-01</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Часы работы:</h3>
+                            <p>Ежедневно с 9:00 до 21:00</p>
+                        </div>
+                        <div class="contact-social">
+                            <a href="https://wa.me/+79034892201" target="_blank" class="social-link whatsapp">WhatsApp</a>
+                            <a href="https://t.me/+79034892201" target="_blank" class="social-link telegram">Telegram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 LEDY. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal_header">
+                <h2>Записаться на услугу</h2>
+                <span class="close"><div>&times;</div></span>
+            </div>
+            <form id="bookingForm"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdax-mkr_iyJrNF4JHxCZUQgB0ypgSdYBKAPqBWTjLHfTt41g/formResponse"
+                method="POST">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="entry.1205287458" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="entry.1211161903" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Услуга:</label>
+                    <select id="service" name="entry.638195446" required>
+                        <option value="">Выберите услугу</option>
+                        <option value="Маникюр">Маникюр</option>
+                        <option value="Педикюр">Педикюр</option>
+                        <option value="Окрашивание">Окрашивание</option>
+                        <option value="Косметология">Косметология</option>
+                        <option value="Стрижка">Стрижка</option>
+                        <option value="SPA-программы">SPA-программы</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
