@@ -4,7 +4,9 @@ const bookBtn = document.getElementById("bookBtn");
 const closeBtns = document.querySelectorAll(".close");
 const bookingForm = document.getElementById("bookingForm");
 const serviceCards = document.querySelectorAll(".service-card");
-const images = document.querySelectorAll(".service-image");
+const serviceImagesContainer = document.querySelector(
+  "#serviceModal .service-images-container"
+);
 const prevBtn = document.querySelector(".image-nav-btn.prev");
 const nextBtn = document.querySelector(".image-nav-btn.next");
 const lightThemeBtn = document.getElementById("lightTheme");
@@ -13,6 +15,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 
 let currentImageIndex = 0;
+let currentImages = [];
 
 function openModal(modal) {
   if (modal) modal.style.display = "flex";
@@ -99,12 +102,12 @@ if (bookingForm) {
 }
 
 function showImage(index) {
-  if (!images.length) return;
-  images.forEach((img) => img.classList.remove("active"));
-  images[index].classList.add("active");
+  if (!currentImages.length) return;
+  currentImages.forEach((img) => img.classList.remove("active"));
+  currentImages[index].classList.add("active");
   currentImageIndex = index;
   if (prevBtn) prevBtn.disabled = index === 0;
-  if (nextBtn) nextBtn.disabled = index === images.length - 1;
+  if (nextBtn) nextBtn.disabled = index === currentImages.length - 1;
 }
 
 if (prevBtn)
@@ -113,7 +116,8 @@ if (prevBtn)
   });
 if (nextBtn)
   nextBtn.addEventListener("click", () => {
-    if (currentImageIndex < images.length - 1) showImage(currentImageIndex + 1);
+    if (currentImageIndex < currentImages.length - 1)
+      showImage(currentImageIndex + 1);
   });
 
 serviceCards.forEach((card) => {
@@ -128,9 +132,14 @@ serviceCards.forEach((card) => {
         "img/nogot.jpeg",
         "img/ЗАГЛУШКА.png",
         "img/nogot.jpeg",
+        "img/nogot.jpeg",
+        "img/nogot.jpeg",
+        "img/nogot.jpeg",
+        "img/nogot.jpeg",
       ],
       // окрашивание
       "coloring": [
+        "img/nogot.jpeg",
         "img/ЗАГЛУШКА.png",
         "img/nogot.jpeg",
       ],
@@ -162,9 +171,19 @@ serviceCards.forEach((card) => {
     document.getElementById("serviceTitle").innerText = title;
     document.getElementById("serviceDescription").innerText = desc;
 
-    images.forEach((img, i) => {
-      img.src = currentServiceImages[i] || currentServiceImages[0];
-    });
+    if (serviceImagesContainer) {
+      serviceImagesContainer.innerHTML = "";
+      currentImages = [];
+
+      currentServiceImages.forEach((src, i) => {
+        const img = document.createElement("img");
+        img.className = "service-image" + (i === 0 ? " active" : "");
+        img.alt = `Изображение услуги ${title} ${i + 1}`;
+        img.src = src;
+        serviceImagesContainer.appendChild(img);
+        currentImages.push(img);
+      });
+    }
 
     showImage(0);
     openModal(serviceModal);
