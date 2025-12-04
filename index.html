@@ -1,370 +1,436 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <title>LEDY - Сеть салонов красоты</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>L</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-    <title>LADY - Сеть салонов красоты</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>L</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+  <body>
     <div class="modal" id="serviceModal">
-        <div class="modal-content">
-            <div class="modal_header">
-                <h2 id="serviceTitle"></h2>
-                <span class="close">&times;</span>
-            </div>
-            
-            <div class="service-images">
-                <div class="service-images-container">
-                    <img class="service-image active" src="img\ЗАГЛУШКА.png" alt="Service Image 1">
-                    <img class="service-image" src="img\ЗАГЛУШКА.png" alt="Service Image 2">
-                </div>
-                <div class="service-images-nav">
-                    <button class="image-nav-btn prev">←</button>
-                    <button class="image-nav-btn next">→</button>
-                </div>
-            </div>
-            <p id="serviceDescription" style="margin-top: 20px;"></p>
+      <div class="modal-content">
+        <div class="modal_header">
+          <h2 id="serviceTitle"></h2>
+          <span class="close">&times;</span>
         </div>
+
+        <div class="service-images">
+          <div class="service-images-container">
+            <img class="service-image active" alt="Service Image 1" />
+            <img class="service-image" alt="Service Image 2" />
+            <img class="service-image" alt="Service Image 2" />
+            <img class="service-image" alt="Service Image 2" />
+          </div>
+          <div class="service-images-nav">
+            <button class="image-nav-btn prev">←</button>
+            <button class="image-nav-btn next">→</button>
+          </div>
+        </div>
+        <p id="serviceDescription" style="margin-top: 20px"></p>
+      </div>
     </div>
 
     <header class="header">
-        <div class="container">
-            <div id="logo" class="logo">
-                <h1>LADY</h1>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#about">Мы</a></li>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#portfolio">Портфолио</a></li>
-                    <li><a href="#testimonials">Отзывы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="theme-switcher">
-                <button class="theme-btn active" id="lightTheme">Светлая</button>
-                <button class="theme-btn " id="darkTheme">Темная</button>
-            </div>
-            <button class="menu-toggle" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <div class="container">
+        <div id="logo" class="logo">
+          <h1>LEDY</h1>
         </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="#about">Мы</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#testimonials">Отзывы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="theme-switcher">
+          <button class="theme-btn active" id="lightTheme">Светлая</button>
+          <button class="theme-btn" id="darkTheme">Темная</button>
+        </div>
+        <button class="menu-toggle" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-        <section class="hero" id="home">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="hero-title">Премиальный салон красоты</h2>
-                    <p class="hero-subtitle">Искусство красоты и элегантности. Профессиональный уход высочайшего уровня</p>
-                    <button class="btn-primary" id="bookBtn">Записаться на прием</button>
-                </div>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <h2 class="hero-title">Премиальный салон красоты</h2>
+            <p class="hero-subtitle">
+              Искусство красоты и элегантности. Профессиональный уход
+              высочайшего уровня
+            </p>
+            <button class="btn-primary" id="bookBtn">
+              Записаться на прием
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="section-title">О нас</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                ЛЕДИ — это сеть современных салонов красоты, где каждая деталь
+                создана для вашего комфорта и преображения. Мы работаем с 2015
+                года и за это время заслужили доверие тысяч клиентов.
+              </p>
+              <p>
+                Наша миссия — делать людей красивыми и уверенными в себе с
+                помощью профессиональных услуг и индивидуального подхода.
+              </p>
             </div>
-        </section>
-
-        <section class="about" id="about">
-            <div class="container">
-                <h2 class="section-title">О нас</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>ЛЕДИ — это сеть современных салонов красоты, где каждая деталь создана для вашего
-                            комфорта и преображения. Мы работаем с 2015 года и за это время заслужили доверие тысяч
-                            клиентов.</p>
-                        <p>Наша миссия — делать людей красивыми и уверенными в себе с помощью профессиональных услуг и
-                            индивидуального подхода.</p>
-                    </div>
-                    <div class="advantages">
-                        <div class="advantage-item">
-                            <div class="advantage-icon">⭐</div>
-                            <h3 class="advantage-title">Профессионализм</h3>
-                            <p>Мастера с опытом от 5 лет и регулярным повышением квалификации</p>
-                        </div>
-                        <div class="advantage-item">
-                            <div class="advantage-icon">🔒</div>
-                            <h3 class="advantage-title">Качество</h3>
-                            <p>Используем только сертифицированные материалы премиум-класса</p>
-                        </div>
-                        <div class="advantage-item">
-                            <div class="advantage-icon">💫</div>
-                            <h3 class="advantage-title">Индивидуальность</h3>
-                            <p>Персональный подход к каждому клиенту и создание уникального образа</p>
-                        </div>
-                        <div class="advantage-item">
-                            <div class="advantage-icon">🏆</div>
-                            <h3 class="advantage-title">Гарантия</h3>
-                            <p>Гарантия на все услуги и бесплатная коррекция при необходимости</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="advantages">
+              <div class="advantage-item">
+                <div class="advantage-icon">⭐</div>
+                <h3 class="advantage-title">Профессионализм</h3>
+                <p>
+                  Мастера с опытом от 5 лет и регулярным повышением квалификации
+                </p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-icon">🔒</div>
+                <h3 class="advantage-title">Качество</h3>
+                <p>
+                  Используем только сертифицированные материалы премиум-класса
+                </p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-icon">💫</div>
+                <h3 class="advantage-title">Индивидуальность</h3>
+                <p>
+                  Персональный подход к каждому клиенту и создание уникального
+                  образа
+                </p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-icon">🏆</div>
+                <h3 class="advantage-title">Гарантия</h3>
+                <p>
+                  Гарантия на все услуги и бесплатная коррекция при
+                  необходимости
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="services" id="services">
-            <div class="container">
-                <h2 class="section-title">Наши услуги</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">💇</div>
-                        <h3>Стрижки и укладки</h3>
-                        <p class="">Создаем идеальную форму, объем и стиль с учетом особенностей волос.</p>
-                        <ul id="ulList">
-                            <li class="li">Стрижки — от 400 ₽</li>
-                            <li class="li">Укладки — от 800 ₽</li>
-                            <li class="li">Вечерние укладки — от 1 500 ₽</li>
-                            <li class="li">Прически — от 1 000 ₽</li>
-                            <li class="li">Накрутка на бигуди — от 600 ₽</li>
-                            <li class="li">Прикорневой объём — от 1 600 ₽</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">🎨</div>
-                        <h3>Окрашивание волос</h3>
-                        <p>Технологии окрашивания от классических до сложных авторских решений.</p>
-                        <ul id="ulList">
-                            <li>Окрашивание волос — от 800 ₽</li>
-                            <li>Сложное окрашивание — от 3 500 ₽</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">✨</div>
-                        <h3>Уход и восстановление</h3>
-                        <p>Глубокие процедуры для здоровья, гладкости и плотности волос.</p>
-                        <ul id="ulList">
-                            <li>Химическая завивка — от 1 500 ₽</li>
-                            <li>Наращивание волос — от 2 500 ₽</li>
-                            <li>Кератиновое выпрямление — от 4 000 ₽</li>
-                            <li>Нанопластика волос — от 4 000 ₽</li>
-                            <li>Ботокс для волос — от 4 000 ₽</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">💅</div>
-                        <h3>Маникюр и педикюр</h3>
-                        <p>Комфортные процедуры для идеальных рук и стоп.</p>
-                        <ul id="ulList">
-                            <li>Маникюр — от 500 ₽</li>
-                            <li>Педикюр — от 900 ₽</li>
-                            <li>Коррекция ногтей — от 1 500 ₽</li>
-                            <li>Наращивание ногтей — от 2 000 ₽</li>
-                            <li>Маникюр и педикюр — от 500 ₽</li>
-                        </ul>
-                    </div>
-
-
-
-
-                    <div class="service-card">
-                        <div class="service-icon">👁️</div>
-                        <h3>Брови и ресницы</h3>
-                        <p>Аккуратная форма и выразительность взгляда.</p>
-                        <ul id="ulList">
-                            <li>Коррекция бровей — 200 ₽</li>
-                            <li>Окрашивание бровей — 200 ₽</li>
-                            <li>Окрашивание ресниц — 200 ₽</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🧖</div>
-                        <h3>SPA-программы</h3>
-                        <p>Расслабляющие и восстанавливающие ритуалы для тела и души.</p>
-                        <ul id="ulList">
-                            <li>Детокс-программа — от 2 700 ₽</li>
-                            <li>Антистресс-уход — от 3 200 ₽</li>
-                            <li>Ароматерапия — от 2 900 ₽</li>
-                        </ul>
-                    </div>
-                </div>
+      <section class="services" id="services">
+        <div class="container">
+          <h2 class="section-title">Наши услуги</h2>
+          <div class="services-grid">
+            <div class="service-card" data-service-id="haircuts">
+              <div class="service-icon">💇</div>
+              <h3>Стрижки и укладки</h3>
+              <p class="">
+                Создаем идеальную форму, объем и стиль с учетом особенностей
+                волос.
+              </p>
+              <ul id="ulList">
+                <li class="li">Стрижки — от 400 ₽</li>
+                <li class="li">Укладки — от 800 ₽</li>
+                <li class="li">Вечерние укладки — от 1 500 ₽</li>
+                <li class="li">Прически — от 1 000 ₽</li>
+                <li class="li">Накрутка на бигуди — от 600 ₽</li>
+                <li class="li">Прикорневой объём — от 1 600 ₽</li>
+              </ul>
             </div>
-        </section>
 
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <h2 class="section-title">Наши работы</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">📸</div>
-                        <p>Свадебный маникюр</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">📸</div>
-                        <p>Омбре окрашивание</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">📸</div>
-                        <p>Вечерняя прическа</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">📸</div>
-                        <p>SPA-ритуал</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">📸</div>
-                        <p>Мужской стиль</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">📸</div>
-                        <p>Детский маникюр</p>
-                    </div>
-                </div>
+            <div class="service-card" data-service-id="coloring">
+              <div class="service-icon">🎨</div>
+              <h3>Окрашивание волос</h3>
+              <p>
+                Технологии окрашивания от классических до сложных авторских
+                решений.
+              </p>
+              <ul id="ulList">
+                <li>Окрашивание волос — от 800 ₽</li>
+                <li>Сложное окрашивание — от 3 500 ₽</li>
+              </ul>
             </div>
-        </section>
-
-        <section class="testimonials" id="testimonials">
-            <div class="container">
-                <h2 class="section-title">Отзывы клиентов</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-avatar">👩</div>
-                        <h3>Анна</h3>
-                        <p>"Прекрасный салон! Мастера настоящие профессионалы. Делаю маникюр уже больше года и всегда
-                            довольна результатом."</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-avatar">👨</div>
-                        <h3>Михаил</h3>
-                        <p>"Отличная мужская стрижка! Удобное расположение, приятная атмосфера и качественный сервис."
-                        </p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-avatar">👩</div>
-                        <h3>Екатерина</h3>
-                        <p>"Сделали сложное окрашивание - результат превзошел все ожидания! Обязательно вернусь еще."
-                        </p>
-                    </div>
-                </div>
+            <div class="service-card" data-service-id="care">
+              <div class="service-icon">✨</div>
+              <h3>Уход и восстановление</h3>
+              <p>
+                Глубокие процедуры для здоровья, гладкости и плотности волос.
+              </p>
+              <ul id="ulList">
+                <li>Химическая завивка — от 1 500 ₽</li>
+                <li>Наращивание волос — от 2 500 ₽</li>
+                <li>Кератиновое выпрямление — от 4 000 ₽</li>
+                <li>Нанопластика волос — от 4 000 ₽</li>
+                <li>Ботокс для волос — от 4 000 ₽</li>
+              </ul>
             </div>
-        </section>
 
-        <section class="contact" id="contact">
-            <div class="container">
-                <h2 class="section-title">Контакты</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <h3>Адреса салонов:</h3>
-                            <p>• Коммунистический проспект, 32</p>
-                            <p>• 2 Краснодарская 96/6</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>Телефон:</h3>
-                            <p>+79034892201</p>
-                        </div>
-                        <div class="contact-item">
-                            <h3>Часы работы:</h3>
-                            <p>Ежедневно с 9:00 до 21:00</p>
-                        </div>
-                        <div class="contact-social">
-                            <a href="https://wa.me/+79034892201" target="_blank"
-                                class="social-link whatsapp">WhatsApp</a>
-                            <a href="https://t.me/+79034892201" target="_blank"
-                                class="social-link telegram">Telegram</a>
-                        </div>
-                    </div>
-                    <div class="contact-map">
-                        <div id="map" class="contact-map-embed"></div>
-                        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-                        <script>
-                            ymaps.ready(init);
-                            function init() {
-                                var myMap = new ymaps.Map("map", {
-                                    center: [47.208698, 39.629520], 
-                                    zoom: 15
-                                });
-
-                               
-                                var myPlacemark = new ymaps.Placemark([47.208698, 39.629520], {
-                                    hintContent: 'Наш салон',
-                                    balloonContent: 'Адрес: Коммунистический проспект, 32'
-                                });
-
-                                var myPlacemark2 = new ymaps.Placemark([47.204009, 39.616090], {
-                                    hintContent: 'Наш салон',
-                                    balloonContent: 'Адрес: 2-я Краснодарская улица, 96/6'
-                                });
-
-                                myMap.geoObjects.add(myPlacemark);
-                                myMap.geoObjects.add(myPlacemark2);
-                            }
-                        </script>
-                    </div>
-                </div>
+            <div class="service-card" data-service-id="nails">
+              <div class="service-icon">💅</div>
+              <h3>Маникюр и педикюр</h3>
+              <p>Комфортные процедуры для идеальных рук и стоп.</p>
+              <ul id="ulList">
+                <li>Маникюр — от 500 ₽</li>
+                <li>Педикюр — от 900 ₽</li>
+                <li>Коррекция ногтей — от 1 500 ₽</li>
+                <li>Наращивание ногтей — от 2 000 ₽</li>
+                <li>Маникюр и педикюр — от 500 ₽</li>
+              </ul>
             </div>
-        </section>
+
+            <div class="service-card" data-service-id="brows-lashes">
+              <div class="service-icon">👁️</div>
+              <h3>Брови и ресницы</h3>
+              <p>Аккуратная форма и выразительность взгляда.</p>
+              <ul id="ulList">
+                <li>Коррекция бровей — 200 ₽</li>
+                <li>Окрашивание бровей — 200 ₽</li>
+                <li>Окрашивание ресниц — 200 ₽</li>
+              </ul>
+            </div>
+            <div class="service-card" data-service-id="spa">
+              <div class="service-icon">🧖</div>
+              <h3>SPA-программы</h3>
+              <p>Расслабляющие и восстанавливающие ритуалы для тела и души.</p>
+              <ul id="ulList">
+                <li>Детокс-программа — от 2 700 ₽</li>
+                <li>Антистресс-уход — от 3 200 ₽</li>
+                <li>Ароматерапия — от 2 900 ₽</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h2 class="section-title">Наши работы</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <div class="portfolio-image">📸</div>
+              <p>Свадебный маникюр</p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-image">📸</div>
+              <p>Омбре окрашивание</p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-image">📸</div>
+              <p>Вечерняя прическа</p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-image">📸</div>
+              <p>SPA-ритуал</p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-image">📸</div>
+              <p>Мужской стиль</p>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-image">📸</div>
+              <p>Детский маникюр</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <h2 class="section-title">Отзывы клиентов</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">👩</div>
+              <h3>Анна</h3>
+              <p>
+                "Прекрасный салон! Мастера настоящие профессионалы. Делаю
+                маникюр уже больше года и всегда довольна результатом."
+              </p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">👨</div>
+              <h3>Михаил</h3>
+              <p>
+                "Отличная мужская стрижка! Удобное расположение, приятная
+                атмосфера и качественный сервис."
+              </p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">👩</div>
+              <h3>Екатерина</h3>
+              <p>
+                "Сделали сложное окрашивание - результат превзошел все ожидания!
+                Обязательно вернусь еще."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="section-title">Контакты</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <h3>Адреса салонов:</h3>
+                <p>• Коммунистический проспект, 32</p>
+                <p>• 2 Краснодарская 96/6</p>
+              </div>
+              <div class="contact-item">
+                <h3>Телефон:</h3>
+                <p>+79034892201</p>
+              </div>
+              <div class="contact-item">
+                <h3>Часы работы:</h3>
+                <p>Ежедневно с 9:00 до 21:00</p>
+              </div>
+              <div class="contact-social">
+                <a
+                  href="https://wa.me/+79034892201"
+                  target="_blank"
+                  class="social-link whatsapp"
+                  >WhatsApp</a
+                >
+                <a
+                  href="https://t.me/+79034892201"
+                  target="_blank"
+                  class="social-link telegram"
+                  >Telegram</a
+                >
+              </div>
+            </div>
+            <div class="contact-map">
+              <div id="map" class="contact-map-embed"></div>
+              <script
+                src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+                type="text/javascript"
+              ></script>
+              <script>
+                ymaps.ready(init);
+                function init() {
+                  var myMap = new ymaps.Map("map", {
+                    center: [47.208698, 39.62952],
+                    zoom: 15,
+                  });
+
+                  var myPlacemark = new ymaps.Placemark([47.208698, 39.62952], {
+                    hintContent: "Наш салон",
+                    balloonContent: "Адрес: Коммунистический проспект, 32",
+                  });
+
+                  var myPlacemark2 = new ymaps.Placemark(
+                    [47.204009, 39.61609],
+                    {
+                      hintContent: "Наш салон",
+                      balloonContent: "Адрес: 2-я Краснодарская улица, 96/6",
+                    }
+                  );
+
+                  myMap.geoObjects.add(myPlacemark);
+                  myMap.geoObjects.add(myPlacemark2);
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-copyright">
-                    <p>&copy; 2024 LADY. Все права защищены.</p>
-                </div>
-                <!-- <div class="footer-social">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-copyright">
+            <p>&copy; 2024 LEDY. Все права защищены.</p>
+          </div>
+          <!-- <div class="footer-social">
                     <a href="#" class="social-icon">Instagram</a>
                     <a href="#" class="social-icon">VK</a>
                 </div> -->
-            </div>
-            <div class="footer-dev">
-                <p>Разработчик: Агаси Назаретян</p>
-                <p>Создаю сайты, которые приносят клиентов</p>
-                <div class="footer-dev-links">
-                    <a href="https://wa.me/79034358978" target="_blank" rel="noopener" class="social-link whatsapp proger">WhatsApp</a>
-                    <a href="https://t.me/+79034358978" target="_blank" rel="noopener" class="social-link telegram proger">Telegram</a>
-                    <a rel="noopener" class="social-link number proger">+79034358978</a>
-                </div>
-            </div>
         </div>
+        <div class="footer-dev">
+          <p>Разработчик: Агаси Назаретян</p>
+          <p>Создаю сайты, которые приносят клиентов</p>
+          <div class="footer-dev-links">
+            <a
+              href="https://wa.me/79034358978"
+              target="_blank"
+              rel="noopener"
+              class="social-link whatsapp proger"
+              >WhatsApp</a
+            >
+            <a
+              href="https://t.me/+79034358978"
+              target="_blank"
+              rel="noopener"
+              class="social-link telegram proger"
+              >Telegram</a
+            >
+            <a rel="noopener" class="social-link number proger">+79034358978</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <div class="modal_header">
-                <h2>Записаться на услугу</h2>
-                <span class="close"><div>&times;</div></span>
-            </div>
-            
-            <form id="bookingForm"
-                action="https://docs.google.com/forms/d/e/1FAIpQLSdax-mkr_iyJrNF4JHxCZUQgB0ypgSdYBKAPqBWTjLHfTt41g/formResponse"
-                method="POST">
-                <div class="form-group">
-                    <label for="name">Имя:</label>
-                    <input type="text" id="name" name="entry.1205287458" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Телефон:</label>
-                    <input type="tel" id="phone" name="entry.1211161903" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">Услуга:</label>
-                    <select id="service" name="entry.638195446" required>
-                        <option value="">Выберите услугу</option>
-                        <option value="Маникюр">Маникюр</option>
-                        <option value="Педикюр">Педикюр</option>
-                        <option value="Окрашивание">Окрашивание</option>
-                        <option value="Косметология">Косметология</option>
-                        <option value="Стрижка">Стрижка</option>
-                        <option value="SPA-программы">SPA-программы</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-primary">Отправить заявку</button>
-            </form>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+      <div class="modal-content">
+        <div class="modal_header">
+          <h2>Записаться на услугу</h2>
+          <span class="close"><div>&times;</div></span>
         </div>
+
+        <form
+          id="bookingForm"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdax-mkr_iyJrNF4JHxCZUQgB0ypgSdYBKAPqBWTjLHfTt41g/formResponse"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="entry.1205287458" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="entry.1211161903" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Услуга:</label>
+            <select id="service" name="entry.638195446" required>
+              <option value="">Выберите услугу</option>
+              <option value="Маникюр">Маникюр</option>
+              <option value="Педикюр">Педикюр</option>
+              <option value="Окрашивание">Окрашивание</option>
+              <option value="Косметология">Косметология</option>
+              <option value="Стрижка">Стрижка</option>
+              <option value="SPA-программы">SPA-программы</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Отправить заявку</button>
+        </form>
+        <iframe
+          name="hidden_iframe"
+          id="hidden_iframe"
+          style="display: none"
+        ></iframe>
+      </div>
     </div>
 
     <script src="script.js"></script>
-    
-</body>
-
+  </body>
 </html>
