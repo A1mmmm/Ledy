@@ -129,39 +129,34 @@ serviceCards.forEach((card) => {
     const serviceImagesById = {
       // стрижки и укладки
       "haircuts": [
-        "img/nogot.jpeg",
         "img/ЗАГЛУШКА.png",
-        "img/nogot.jpeg",
-        "img/nogot.jpeg",
-        "img/nogot.jpeg",
-        "img/nogot.jpeg",
-        "img/nogot.jpeg",
+        "img/ЗАГЛУШКА.png",
       ],
       // окрашивание
       "coloring": [
-        "img/nogot.jpeg",
         "img/ЗАГЛУШКА.png",
-        "img/nogot.jpeg",
+        "img/ЗАГЛУШКА.png",
       ],
       // уход и восстановление
       "care": [
-        "img/care-1.jpg",
-        "img/care-2.jpg",
+        "img/кератиновое выпрямление.jpeg",
       ],
       // маникюр и педикюр
       "nails": [
-        "img/nails-1.jpg",
-        "img/nails-2.jpg",
+        "img/nails-1.jpeg",
+        "img/nails-4.jpeg",
+        "img/nails-2.jpeg",
+        "img/nails-3.jpeg",
       ],
       // брови и ресницы
       "brows-lashes": [
-        "img/brows-1.jpg",
-        "img/brows-2.jpg",
+        "img/ЗАГЛУШКА.png",
+        "img/ЗАГЛУШКА.png",
       ],
       // SPA-программы
       "spa": [
-        "img/spa-1.jpg",
-        "img/spa-2.jpg",
+        "img/ЗАГЛУШКА.png",
+        "img/ЗАГЛУШКА.png",
       ],
     };
 
