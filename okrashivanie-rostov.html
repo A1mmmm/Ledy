@@ -56,6 +56,9 @@
                     <li><a href="file:///D:/beauty-version-control/beauty-salon/krasnodarskaya.html">2-я Краснодарская</a></li>
                 </ul>
             </nav>
+            <div class="header-phone">
+                <span>+7 (903) 489-22-01</span>
+            </div>
             <div class="theme-switcher">
                 <button class="theme-btn active" id="lightTheme">Светлая</button>
                 <button class="theme-btn" id="darkTheme">Темная</button>
@@ -77,6 +80,42 @@
                     <p class="hero-text">В салоне красоты LEDY в Ростове-на-Дону мы выполняем окрашивание от базового закрашивания седины до сложных многотоновых техник. Мастера подбирают оттенок с учётом исходного цвета, состояния волос и желаемого результата, чтобы вы получили стойкий, красивый цвет без лишнего травмирования.</p>
                     <button class="btn-primary" id="bookBtn">Записаться</button>
                 </div>
+            </div>
+        </section>
+
+        <section class="masters" id="masters-coloring">
+            <div class="container">
+                <h2 class="section-title">Мастера по окрашиванию</h2>
+                <div class="masters-grid">
+                    <article class="master-card" data-master-id="hair-1">
+                        <img src="img/ЗАГЛУШКА.png" alt="Парикмахер 1" class="master-photo">
+                        <h3 class="master-name">Парикмахер 1</h3>
+                        <p class="master-role">Парикмахер-стилист</p>
+                        <p class="master-experience">Опыт работы 7+ лет</p>
+                    </article>
+
+                    <article class="master-card" data-master-id="hair-2">
+                        <img src="img/ЗАГЛУШКА.png" alt="Парикмахер 2" class="master-photo">
+                        <h3 class="master-name">Парикмахер 2</h3>
+                        <p class="master-role">Парикмахер-стилист</p>
+                        <p class="master-experience">Опыт работы 5+ лет</p>
+                    </article>
+
+                    <article class="master-card" data-master-id="hair-3">
+                        <img src="img/ЗАГЛУШКА.png" alt="Парикмахер 3" class="master-photo">
+                        <h3 class="master-name">Парикмахер 3</h3>
+                        <p class="master-role">Парикмахер</p>
+                        <p class="master-experience">Опыт работы 4+ года</p>
+                    </article>
+
+                    <article class="master-card" data-master-id="hair-4">
+                        <img src="img/ЗАГЛУШКА.png" alt="Парикмахер 4" class="master-photo">
+                        <h3 class="master-name">Парикмахер 4</h3>
+                        <p class="master-role">Парикмахер</p>
+                        <p class="master-experience">Опыт работы 6+ лет</p>
+                    </article>
+                </div>
+                <p class="masters-note">Нажмите на карточку мастера, чтобы открыть портфолио с примерами работ.</p>
             </div>
         </section>
 
@@ -155,10 +194,22 @@
             <div class="container">
                 <h2 class="section-title">Фото окрашивания</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Натуральное мелирование</p></div>
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Балаяж на среднюю длину</p></div>
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Яркое однотонное окрашивание</p></div>
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Мягкая растяжка цвета</p></div>
+                    <div class="portfolio-item">
+                        <img src="img/кератиновое выпрямление.jpeg" alt="Натуральное мелирование" class="portfolio-image">
+                        <p>Натуральное мелирование</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/ЗАГЛУШКА.png" alt="Балаяж на среднюю длину" class="portfolio-image">
+                        <p>Балаяж на среднюю длину</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/ЗАГЛУШКА.png" alt="Яркое однотонное окрашивание" class="portfolio-image">
+                        <p>Яркое однотонное окрашивание</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/ЗАГЛУШКА.png" alt="Мягкая растяжка цвета" class="portfolio-image">
+                        <p>Мягкая растяжка цвета</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -226,6 +277,38 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="masterModal">
+        <div class="modal-content master-modal-content">
+            <span class="close">&times;</span>
+
+            <div class="master-modal-layout">
+                <div class="master-modal-info">
+                    <div class="master-main-photo-wrapper">
+                        <img id="masterPhoto" class="master-main-photo" src="" alt="Мастер салона LEDY">
+                    </div>
+                    <h2 id="masterName"></h2>
+                    <p id="masterRole" class="master-portfolio-role"></p>
+                    <p id="masterExperience" class="master-portfolio-experience"></p>
+                </div>
+
+                <div class="master-modal-works">
+                    <h3 class="master-works-title">Работы мастера</h3>
+                    <div class="service-images-container master-images-container">
+                        <!-- изображения работ мастера будут подставляться из script.js -->
+                    </div>
+                    <div class="service-images-nav master-images-nav">
+                        <button class="image-nav-btn prev master-prev" type="button">
+                            &#10094;
+                        </button>
+                        <button class="image-nav-btn next master-next" type="button">
+                            &#10095;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal" id="bookingModal">
         <div class="modal-content">

@@ -56,6 +56,9 @@
                     <li><a href="file:///D:/beauty-version-control/beauty-salon/krasnodarskaya.html">2-я Краснодарская</a></li>
                 </ul>
             </nav>
+            <div class="header-phone">
+                <span>+7 (903) 489-22-01</span>
+            </div>
             <div class="theme-switcher">
                 <button class="theme-btn active" id="lightTheme">Светлая</button>
                 <button class="theme-btn" id="darkTheme">Темная</button>
@@ -77,6 +80,28 @@
                     <p class="hero-text">В салоне красоты LEDY в Ростове-на-Дону вы можете сделать аккуратный и безопасный маникюр, который подчеркнет ухоженность рук и будет комфортен в носке. Мы работаем стерильными инструментами, используем современные техники и уделяем внимание как эстетике, так и здоровью ногтей и кожи.</p>
                     <button class="btn-primary" id="bookBtn">Записаться</button>
                 </div>
+            </div>
+        </section>
+
+        <section class="masters" id="masters-manicure">
+            <div class="container">
+                <h2 class="section-title">Мастера маникюра</h2>
+                <div class="masters-grid">
+                    <article class="master-card" data-master-id="nails-1">
+                        <img src="img/ЗАГЛУШКА.png" alt="Мастер маникюра 1" class="master-photo">
+                        <h3 class="master-name">Мастер маникюра 1</h3>
+                        <p class="master-role">Мастер маникюра</p>
+                        <p class="master-experience">Опыт работы 5+ лет</p>
+                    </article>
+
+                    <article class="master-card" data-master-id="nails-2">
+                        <img src="img/ЗАГЛУШКА.png" alt="Мастер маникюра 2" class="master-photo">
+                        <h3 class="master-name">Мастер маникюра 2</h3>
+                        <p class="master-role">Мастер маникюра</p>
+                        <p class="master-experience">Опыт работы 3+ года</p>
+                    </article>
+                </div>
+                <p class="masters-note">Нажмите на карточку мастера, чтобы открыть портфолио с примерами работ.</p>
             </div>
         </section>
 
@@ -155,10 +180,22 @@
             <div class="container">
                 <h2 class="section-title">Фото маникюра</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Нюдовый маникюр</p></div>
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Классический красный</p></div>
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Дизайн с минимализмом</p></div>
-                    <div class="portfolio-item"><div class="portfolio-image">📸</div><p>Френч маникюр</p></div>
+                    <div class="portfolio-item">
+                        <img src="img/nails-1.jpeg" alt="Нюдовый маникюр" class="portfolio-image">
+                        <p>Нюдовый маникюр</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/nails-2.jpeg" alt="Классический красный" class="portfolio-image">
+                        <p>Классический красный</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/nails-3.jpeg" alt="Дизайн с минимализмом" class="portfolio-image">
+                        <p>Дизайн с минимализмом</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/nails-4.jpeg" alt="Френч маникюр" class="portfolio-image">
+                        <p>Френч маникюр</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -226,6 +263,38 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="masterModal">
+        <div class="modal-content master-modal-content">
+            <span class="close">&times;</span>
+
+            <div class="master-modal-layout">
+                <div class="master-modal-info">
+                    <div class="master-main-photo-wrapper">
+                        <img id="masterPhoto" class="master-main-photo" src="" alt="Мастер салона LEDY">
+                    </div>
+                    <h2 id="masterName"></h2>
+                    <p id="masterRole" class="master-portfolio-role"></p>
+                    <p id="masterExperience" class="master-portfolio-experience"></p>
+                </div>
+
+                <div class="master-modal-works">
+                    <h3 class="master-works-title">Работы мастера</h3>
+                    <div class="service-images-container master-images-container">
+                        <!-- изображения работ мастера будут подставляться из script.js -->
+                    </div>
+                    <div class="service-images-nav master-images-nav">
+                        <button class="image-nav-btn prev master-prev" type="button">
+                            &#10094;
+                        </button>
+                        <button class="image-nav-btn next master-next" type="button">
+                            &#10095;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal" id="bookingModal">
         <div class="modal-content">
